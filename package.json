@@ -9,8 +9,8 @@
   },
   "main": "dist/js/fresco.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/staaky/fresco.git"
+    "type": "git",
+    "url": "https://github.com/staaky/fresco.git"
   },
   "license": "CC-BY-4.0",
   "keywords": [

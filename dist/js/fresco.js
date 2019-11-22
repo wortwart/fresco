@@ -1,5 +1,5 @@
 /**
- * Fresco - A Beautiful Responsive Lightbox - v2.3.0
+ * Fresco - A Beautiful Responsive Lightbox - v2.3.1
  * (c) 2012-2019 Nick Stakenburg
  *
  * https://www.frescojs.com
@@ -25,7 +25,7 @@
 var Fresco = {};
 
 $.extend(Fresco, {
-  version: "2.3.0"
+  version: "2.3.1"
 });
 
 Fresco.Skins = {
