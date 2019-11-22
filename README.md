@@ -11,7 +11,7 @@ Fresco has been open-sourced under the [Creative Commons BY 4.0 license](https:/
 
 You can specify a download link in the lightbox.
 
-- data-download-link: URL of the download
-- data-download-text: the download link text, obviously
+- data-fresco-download-link: URL of the download
+- data-fresco-download-text: the download link text, obviously
 
 Both are required to add a download link.
