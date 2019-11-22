@@ -16,10 +16,18 @@ $.extend(View.prototype, {
     else if (object && object.nodeType === 1) {
       var element = $(object);
 
+      var downloadLink = element.attr("data-fresco-download-link");
+      var downloadText = element.attr("data-fresco-download-text");
+      var download = (downloadLink && downloadText)? {
+      	link: downloadLink,
+      	text: downloadText
+      } : null;
+
       object = {
         element: element[0],
         url: element.attr("href"),
         caption: element.attr("data-fresco-caption"),
+        download: download,
         group: element.attr("data-fresco-group"),
         extension: element.attr("data-fresco-extension"),
         type: element.attr("data-fresco-type"),
@@ -28,6 +36,9 @@ $.extend(View.prototype, {
             eval("({" + element.attr("data-fresco-options") + "})")) ||
           {}
       };
+
+      if (object.download && !object.caption)
+      	object.caption = ' ';
     }
 
     if (object) {

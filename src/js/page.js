@@ -95,6 +95,16 @@ var Page = (function() {
         }
       }
 
+      if (this.view.download) {
+      	this.element.append(
+      	  this.download = $("<a>")
+      	    .addClass("fr-download")
+      	    .attr("href", this.view.download.link)
+      	    .attr("download", true)
+      	    .append(this.view.download.text)
+      	);
+      }
+
       // background
       this.container
         .append(
