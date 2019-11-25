@@ -93,16 +93,12 @@ var Page = (function() {
               .html(this.view.caption))
           );
         }
-      }
 
-      if (this.view.download) {
-      	this.element.append(
-      	  this.download = $("<a>")
-      	    .addClass("fr-download")
-      	    .attr("href", this.view.download.link)
-      	    .attr("download", true)
-      	    .append(this.view.download.text)
-      	);
+        if (this.view.download) {
+          this.infoPadder.append(
+      			this._createDownloadInfo()
+          );
+        }
       }
 
       // background
@@ -206,6 +202,12 @@ var Page = (function() {
                 .html(this.view.caption))
             );
           }
+
+		      if (this.view.download) {
+		      	this.infoPadderInside.append(
+      				this._createDownloadInfo()
+      			);
+		      }
         }
 
         // insert a separate position for when there's no caption
@@ -261,6 +263,16 @@ var Page = (function() {
       }
 
       this._created = true;
+    },
+
+    _createDownloadInfo: function() {
+    	if (!this.view.download) return;
+			this.download = $("<a>")
+			  .addClass("fr-download")
+			  .attr("href", this.view.download.link)
+			  .attr("download", true)
+			  .append(this.view.download.text);
+			return this.download;
     },
 
     //surrounding
