@@ -261,15 +261,19 @@
 }
 
 .fr-info-padder {
-  display: block;
+  display: flex;
   overflow: hidden;
   padding: 12px;
   position: relative;
   width: auto;
 }
+
 .fr-caption {
-  width: auto;
-  display: inline;
+	flex: 1 1 auto;
+}
+
+.fr-download {
+	flex: 0 0 auto;
 }
 
 .fr-position {
