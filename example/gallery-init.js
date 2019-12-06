@@ -16,23 +16,23 @@
 					{
 					 	url: 'images/frans_hals.jpg',
 						caption: "Frans Hals, Banquet of the Officers of the St George Civic Guard, 1627",
+						download: {
+							text: 'Klick mich an!',
+							link: 'images/frans_hals.jpg'
+						},
 						options: {
-							thumbnail: 'images/thumbnails/frans_hals.jpg',
-							download: {
-								text: 'Klick mich an!',
-								link: 'images/frans_hals.jpg'
-							}
+							thumbnail: 'images/thumbnails/frans_hals.jpg'
 						}
 					},
 					{
 						url: 'images/reynolds.jpg',
 						caption: "Sir Joshua Reynolds, The Countess of Dartmouth, 1757",
+						download: {
+							text: 'Klick mich an!',
+							link: 'images/reynolds.jpg'
+						},
 						options: {
-							thumbnail: 'images/thumbnails/reynolds.jpg',
-							download: {
-								text: 'Klick mich an!',
-								link: 'images/reynolds.jpg'
-							}
+							thumbnail: 'images/thumbnails/reynolds.jpg'
 						}
 					}
 				],
