@@ -14,24 +14,24 @@
 			Fresco.show(
 				[
 					{
-					 	url: 'https://placeimg.com/1024/800/arch',
+					 	url: 'images/frans_hals.jpg',
 						caption: "Frans Hals, Banquet of the Officers of the St George Civic Guard, 1627",
 						options: {
-							thumbnail: 'https://placeimg.com/240/240/arch',
+							thumbnail: 'images/thumbnails/frans_hals.jpg',
 							download: {
 								text: 'Klick mich an!',
-								link: 'https://placeimg.com/1024/800/arch'
+								link: 'images/frans_hals.jpg'
 							}
 						}
 					},
 					{
-						url: 'https://placeimg.com/800/1024/nature',
+						url: 'images/reynolds.jpg',
 						caption: "Sir Joshua Reynolds, The Countess of Dartmouth, 1757",
 						options: {
-							thumbnail: 'https://placeimg.com/240/240/nature',
+							thumbnail: 'images/thumbnails/reynolds.jpg',
 							download: {
 								text: 'Klick mich an!',
-								link: 'https://placeimg.com/1024/800/nature'
+								link: 'images/reynolds.jpg'
 							}
 						}
 					}
