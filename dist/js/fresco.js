@@ -1,5 +1,5 @@
 /**
- * Fresco - A Beautiful Responsive Lightbox - v2.4.0
+ * Fresco - A Beautiful Responsive Lightbox - v2.4.1
  * (c) 2012-2019 Nick Stakenburg
  *
  * https://www.frescojs.com
@@ -25,7 +25,7 @@
 var Fresco = {};
 
 $.extend(Fresco, {
-  version: "2.4.0"
+  version: "2.4.1"
 });
 
 Fresco.Skins = {
@@ -1912,7 +1912,8 @@ var Page = (function() {
     },
 
     _createDownloadInfo: function() {
-    	if (!this.view.download) return;
+    	if (!this.view.download || !this.view.download.link)
+    		return console.warn("Download option in fresco gallery not properly specified");
     	var splitPath = this.view.download.link.split("/");
     	var downloadName = splitPath[splitPath.length - 1];
 			this.download = $("<a>")
@@ -3527,7 +3528,6 @@ var _Fresco = {
         var view = new View(object, options),
           _dgo = "data-fresco-group-options",
           groupOptions = {};
-          console.log(83, view)
 
         if (view.group) {
           // extend the entire group
@@ -3554,7 +3554,6 @@ var _Fresco = {
               views.push(
                 new View(element, $.extend({}, groupOptions, options))
               );
-		          console.log(views)
             });
           }
         } else {
@@ -3568,7 +3567,6 @@ var _Fresco = {
           }
 
           views.push(view);
-          console.log(views)
         }
         break;
 

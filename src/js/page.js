@@ -266,7 +266,8 @@ var Page = (function() {
     },
 
     _createDownloadInfo: function() {
-    	if (!this.view.download) return;
+    	if (!this.view.download || !this.view.download.link)
+    		return console.warn("Download option in fresco gallery not properly specified");
     	var splitPath = this.view.download.link.split("/");
     	var downloadName = splitPath[splitPath.length - 1];
 			this.download = $("<a>")
