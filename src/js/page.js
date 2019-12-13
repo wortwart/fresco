@@ -267,10 +267,12 @@ var Page = (function() {
 
     _createDownloadInfo: function() {
     	if (!this.view.download) return;
+    	var splitPath = this.view.download.link.split("/");
+    	var downloadName = splitPath[splitPath.length - 1];
 			this.download = $("<a>")
 			  .addClass("fr-download")
 			  .attr("href", this.view.download.link)
-			  .attr("download", true)
+			  .attr("download", downloadName)
 			  .append(this.view.download.text);
 			return this.download;
     },

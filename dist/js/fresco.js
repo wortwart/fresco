@@ -1913,10 +1913,12 @@ var Page = (function() {
 
     _createDownloadInfo: function() {
     	if (!this.view.download) return;
+    	var splitPath = this.view.download.link.split("/");
+    	var downloadName = splitPath[splitPath.length - 1];
 			this.download = $("<a>")
 			  .addClass("fr-download")
 			  .attr("href", this.view.download.link)
-			  .attr("download", true)
+			  .attr("download", downloadName)
 			  .append(this.view.download.text);
 			return this.download;
     },
@@ -3525,6 +3527,7 @@ var _Fresco = {
         var view = new View(object, options),
           _dgo = "data-fresco-group-options",
           groupOptions = {};
+          console.log(83, view)
 
         if (view.group) {
           // extend the entire group
@@ -3551,6 +3554,7 @@ var _Fresco = {
               views.push(
                 new View(element, $.extend({}, groupOptions, options))
               );
+		          console.log(views)
             });
           }
         } else {
@@ -3564,6 +3568,7 @@ var _Fresco = {
           }
 
           views.push(view);
+          console.log(views)
         }
         break;
 
